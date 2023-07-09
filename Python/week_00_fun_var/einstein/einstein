@@ -1,0 +1,9 @@
+def main():
+    mass = int(input("What is the mass in kilograms? "))
+    print(Emc(mass))
+
+def Emc(mass):
+    return mass * (300000000**2)
+
+if __name__ == "__main__":
+    main()
