@@ -16,14 +16,14 @@ This document contains a brief explanation on how I ended up in the final model.
     > - one dense hidden layer with 128 nodes, activation=relu, with 0.5 dropout
 
  
-However this model only gave me an accuracy of about 5%. Therefore I move to tune the paremeters and experiment a bit.
+However, this model only gave me an accuracy of about 5%. Therefore I move to tune the parameters and experiment a bit.
 
   
 **2. The next thing I tried was to increase the number of layers to the same number of categories.**
 
-This increased the efficiency of the model from (0.0536 to 0.1664). It was a big improvement, but still not quite good enough. So I decided to double the initial number of layers, using 64. However, this model performed poorly compared to model #2. Therefore, I decide to stick to 43 layers, and move to further experiements.
+This increased the efficiency of the model from (0.0536 to 0.1664). It was a big improvement, but still not quite good enough. So I decided to double the initial number of layers, using 64. However, this model performed poorly compared to model #2. Therefore, I decided to stick to 43 layers and move to further experiments.
 
-**3. Tweeking the kernel and pooling layer**
+**3. Tweaking the kernel and pooling layer**
 
 As I have very small images (30x30 pixels), I wanted to run the model with a smaller kernel (2x2). I didn’t get any satisfactory results, so I applied a smaller pool size as well (1x1). Of course, in this case the pooling doesn't make any sense, but why not try - I am a beginner, don't judge me! 🙈 Likewise the previous situation, the performance was poor and the time to run increased considerably. Because of that, I returned to values 43 layers, kernel 3x4, pooling 2x2.
 
@@ -35,11 +35,11 @@ I reduced the dropout to 0.25. Still, the model performed poorly.
 
 **5. Hidden layers, here I come!**
 
-Therefore I moved to increase the number of hidden layers, which ultimaly led me to a model with over 90% accuracy.
+Therefore I moved to increase the number of hidden layers, which ultimately led me to a model with over 90% accuracy.
 
-I experimented with different number of hidden layers (varying from 1 to 6), different values of layers, and I also tweeked the values on steps 2 - 4 again.Increasing the number of layers increased the accuracy of my model, however increasing the number of nodes within a layer played a role as well.
+I experimented with a different number of hidden layers (varying from 1 to 6), and different values of layers, and I also tweaked the values on steps 2 - 4 again. Increasing the number of layers increased the accuracy of my model, however, increasing the number of nodes within a layer played a role as well.
 
-I also tested a different activation for the sub-sequential layers (softmax), but the model performed poorly with those tweeks. Below the results of a few of these experimentations:
+I also tested a different activation for the sub-sequential layers (softmax), but the model performed poorly with those tweaks. Below are the results of a few of these experimentations:
 
   
 
@@ -109,7 +109,7 @@ The results of the training are summarised below:
 
 **7. Accounting for overfitting**
 
-As the assigment goes, I am not allowed to modify the main function. However I still wanted to take some steps to tackle the issue of overfitting.
+As the assignment goes on, I am not allowed to modify the main function. However, I still wanted to take some steps to tackle the issue of overfitting.
 
 After reading several tutorials online, I decided to use matplotlib to plot two graphs just to make sure my model was not overfitting.
 
@@ -117,7 +117,7 @@ The final plots can be seen in the image below. I still need to learn more about
 
 <img  scr="static/figure_1.png"  width="80%">
 
-## The takeways
+## The takeaways
 
  - The simpler the model the better
  - A kernel size of 3x3 is probably small enough
