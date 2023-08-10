@@ -8,9 +8,8 @@ This repository is a personal space for consulting notes and projects created du
 https://cs50.harvard.edu/python/2022/
 (Completed in July 2023)
 
-**FINAL PROJECT:** [Dutchionary](https://imgabi.com/dutchionary)
-Dutchtionary is a Flask web-application powered by OpenAI API. 
-For the final assignment, I submitted a simple application running in the terminal.
+**FINAL PROJECT:** [Dutchionary](https://imgabi.com/dutchionary) is a Flask web application powered by OpenAI API. 
+I submitted a simple application running in the terminal for the final assignment.
 
 <img src="static/python_dutchionary.png" width="75%" />
 ----
@@ -21,10 +20,10 @@ https://cs50.harvard.edu/ai/2020/
 
 ### Week 00: SEARCH
 
-**Topics covered:** Depth-first search, breath-first search, uninformed search, informed search, greedy best-first search, A* search, adversarial search, minimax, alpha-beta pruning, depth-limited minimax
+**Topics covered:** Depth-first search, breadth-first search, uninformed search, informed search, greedy best-first search, A* search, adversarial search, minimax, alpha-beta pruning, depth-limited minimax
 
 **PROJECT 01: DEGREES**
-Write a program that determines how many “degrees of separation” apart two actors are.
+Write a program determining how many “degrees of separation” apart two actors are.
 
 <img src="static/week_0_degrees.png" width="75%" />
 
@@ -55,7 +54,7 @@ Write an AI to rank web pages by importance (Markov Chain).
 <img src="static/week_2_pagerank.png" width="75%" />
 
 **PROJECT 02: HEREDITY**
-Write an AI to assess the likelihood that a person will have a particular genetic trait (Bayesian network).
+Write an AI to assess the likelihood of a person having a particular genetic trait (Bayesian network).
 
 <img src="static/week_2_heredity.png" width="75%" />
 
@@ -101,7 +100,7 @@ Write an AI to identify which traffic sign appears in a photograph, **using Tens
 
 ### Week 06: LANGUAGES
 
-**Topics covered:**  Natural language processing, semantics x syntax, n-grams, tokenisation, Markov models, text categorisation, information retrival, topic modeling | **Libraries: Nltk** 
+**Topics covered:**  Natural language processing, semantics x syntax, n-grams, tokenisation, Markov models, text categorisation, information retrieval, topic modelling | **Libraries: Nltk** 
 
 **PROJECT 01: PARSER**
 Write an AI to parse sentences and extract noun phrases.
@@ -109,7 +108,7 @@ Write an AI to parse sentences and extract noun phrases.
 <img src="static/week_6_parser.png" width="75%" />
 
 **PROJECT 02: QUESTIONS**
-Write an AI to ask questions (information retrival based on a corpus). 
+Write an AI to ask questions (information retrieval based on a corpus). 
 <img src="static/week_6_questions.png" width="75%" />
 
 
