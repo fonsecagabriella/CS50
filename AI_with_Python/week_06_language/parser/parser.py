@@ -22,10 +22,6 @@ AdjP -> Adj | AdjP N | P AdjP | Adj AdjP
 
 """
 
-#S -> VP | NP
-#VP -> V | NP VP | VP NP | NP V NP | VP Conj VP | VP Adv
-#NP -> N | Adj NP | Det NP | P NP | NP Adv | NP NP
-
 grammar = nltk.CFG.fromstring(NONTERMINALS + TERMINALS)
 parser = nltk.ChartParser(grammar)
 
