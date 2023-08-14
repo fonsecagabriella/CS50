@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="google_favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Google Search</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="static/google_logo.png" alt="Google Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Search</a></li>
+                <li><a href="image_search.html">Image Search</a></li>
+                <!-- Add more links here if needed -->
+            </ul>
+        </nav>
+    </header>
+    <main id="advanced_main">
+        <div>
+            <h1>Advanced Search</h1>
+            <h2>Find pages with...</h2>
+            <form action="https://www.google.com/search">
+                <div class="advanced_search_field">
+                    <label>all these words: </label>
+                    <input type="text" placeholder="Search" name="as_q">
+                    <span class="info_search"></span>
+                </div>
+                <div class="advanced_search_field">
+                    <label>this exact word or phrase:</label>
+                    <input type="text" placeholder="Search" name="as_epq">
+                    <span class="info_search"></span>
+                </div>
+                <div class="advanced_search_field">
+                    <label>any of these words: </label>
+                    <input type="text" placeholder="Search" name="as_q">
+                    <span class="info_search"></span>
+                </div>
+                <div class="advanced_search_field">
+                    <label>none of these words: </label>
+                    <input type="text" placeholder="Search" name="as_eq">
+                    <span class="info_search"></span>
+                </div>
+                <hr />
+                <h2>Then narrow your results by...</h2>
+                <div class="advanced_search_field">
+                    <label> language: </label>
+                    <input list="languages" placeholder="Language" name="lr">
+                    <datalist id="languages">
+                        <option value="lang_af">Afrikaans<option>
+                            <option value="lang_ar">Arabic<option>
+                            <option value="lang_hy">Armenian<option>
+                            <option value="lang_be">Belarusian<option>
+                            <option value="lang_bg">Bulgarian<option>
+                            <option value="lang_ca">Catalan<option>
+                            <option value="lang_zh-CN">Chinese (Simplified)<option>
+                            <option value="lang_zh-TW">Chinese (Traditional)<option>
+                            <option value="lang_hr">Croatian<option>
+                            <option value="lang_cs">Czech<option>
+                            <option value="lang_da">Danish<option>
+                            <option value="lang_nl">Dutch<option>
+                            <option value="lang_en">English<option>
+                            <option value="lang_eo">Esperanto<option>
+                            <option value="lang_et">Estonian<option>
+                            <option value="lang_tl">Filipino<option>
+                            <option value="lang_fi">Finnish<option>
+                            <option value="lang_fr">French<option>
+                            <option value="lang_de">German<option>
+                            <option value="lang_el">Greek<option>
+                            <option value="lang_iw">Hebrew<option>
+                            <option value="lang_hi">Hindi<option>
+                            <option value="lang_hu">Hungarian<option>
+                            <option value="lang_is">Icelandic<option>
+                            <option value="lang_id">Indonesian<option>
+                            <option value="lang_it">Italian<option>
+                            <option value="lang_ja">Japanese<option>
+                            <option value="lang_ko">Korean<option>
+                            <option value="lang_lv">Latvian<option>
+                            <option value="lang_lt">Lithuanian<option>
+                            <option value="lang_no">Norwegian<option>
+                            <option value="lang_fa">Persian<option>
+                            <option value="lang_pl">Polish<option>
+                            <option value="lang_pt">Portuguese<option>
+                            <option value="lang_ro">Romanian<option>
+                            <option value="lang_ru">Russian<option>
+                            <option value="lang_sr">Serbian<option>
+                            <option value="lang_sk">Slovak<option>
+                            <option value="lang_sl">Slovenian<option>
+                            <option value="lang_es">Spanish<option>
+                            <option value="lang_sw">Swahili<option>
+                            <option value="lang_sv">Swedish<option>
+                            <option value="lang_th">Thai<option>
+                            <option value="lang_tr">Turkish<option>
+                            <option value="lang_uk">Ukrainian<option>
+                            <option value="lang_vi">Vietnamese<option>
+                    </datalist>
+                    <span class="info_search"></span>
+                </div>
+                <div class="advanced_search_field">
+                    <label>site or domain: </label>
+                    <input type="text" placeholder="Search" name="as_sitesearch">
+                    <span class="info_search"></span>
+                </div>
+                <div class="advanced_search_field">
+                    <label> file type: </label>
+                    <input list="file_format" placeholder="File Format" name="as_filetype">
+                    <datalist id="file_format">
+                        <option value="">any format</option>
+                        <option value="pdf">Adobe Acrobat PDF (.pdf)</option>
+                        <option value="ps">Adobe Postscript (.ps)</option>
+                        <option value="dwf">Autodesk DWF (.dwf)</option>
+                        <option value="kml">Google Earth KML (.kml)</option>
+                        <option value="kmz">Google Earth KMZ (.kmz)</option>
+                        <option value="xls">Microsoft Excel (.xls)</option>
+                        <option value="ppt">Microsoft PowerPoint (.ppt)</option>
+                        <option value="doc">Microsoft Word (.doc)</option>
+                        <option value="rtf">Rich Text Format (.rtf)</option>
+                        <option value="swf">Shockwave Flash (.swf)</option>
+                    </datalist>
+                    <span class="info_search"></span>
+                </div>
+                <div class="buttons">
+                    <button type="submit" name="tbm" value="Advanced Search">Advanced Search</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
