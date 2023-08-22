@@ -1,0 +1,33 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    New Wiki
+{% endblock %}
+
+{% block body %}
+
+<div id="entry_content">
+    {% if is_edit == True %}
+    <h1> 📝 Edit Wiki</h1>
+    {% else %}
+    <h1> 🆕 New Wiki</h1>
+    {% endif %}
+
+    {% if existing_entry %}
+    <div class="alert alert-danger">
+        <p> There is a already a wiki with this title, and no one likes duplicated pages! 😩 </p>
+        <p> But don't worry, you can still <a href="wiki/{{entry_title}}">edit the original page here</a>.</p>
+    </div>
+    {% endif %}
+
+    <p>Note #1: You can format your text using <a href="https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax" target="_blank">Markdown</a>.</p>
+    <p> Note #2: Always start your content with #TITLE, so the page is displayed correctly. For example, if you are writing about cats, start with # Cats </p>
+    <form action="{% url 'new_entry' %}" method="post" id="new_wiki">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit">
+    </form>
+
+    
+</div>
+{% endblock %}

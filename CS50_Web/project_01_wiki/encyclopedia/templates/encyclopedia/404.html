@@ -1,0 +1,19 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    404
+{% endblock %}
+
+{% block body %}
+<div id="not_found">
+
+    <h1>Houston, we have a 404.</h1>
+    <p>Looks like you've embarked on a mission to a non-existent page.</p>
+
+    <div class="row">
+        <a class="btn btn-primary" href="{% url 'index' %}"> __ Captain, take us back to the homepage! __</a>
+        <a class="btn btn-primary" href="{% url 'new_entry' %}"> __ Captain, I can create a page about {{ entry }}! __</a>
+    </div>
+</div>
+
+{% endblock %}

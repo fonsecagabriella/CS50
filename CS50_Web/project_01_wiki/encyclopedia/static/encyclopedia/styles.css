@@ -1,0 +1,163 @@
+body {
+    margin: 0;
+    background-color: white;
+    font-family: 'Source Code Pro', monospace;
+}
+
+code {
+    white-space: pre;
+}
+
+h1 {
+    margin-top: 0px;
+    padding-top: 20px;
+    font-weight: 900;
+}
+
+textarea {
+    height: 90vh;
+    width: 80%;
+}
+
+.main {
+    padding: 10px;
+}
+
+.search {
+    width: 100%;
+    font-size: 12px;
+    line-height: 24px;
+    background-color: #00ff00;
+    color: #000;
+    padding: 4px;
+    border-radius: 0px;
+}
+
+.sidebar {
+    background-color: #000;
+    padding: 24px 48px;
+    color: #fff;
+    
+}
+
+.sidebar h2 a{
+    margin-top: 12px;
+    letter-spacing: 4px;
+    font-size: 24px;
+    color: #ffffff;
+    font-weight: 900;
+}
+
+.sidebar a{
+    color: #00ff00;
+    font-size: 14px;
+    
+    
+}
+.sidebar div{
+    margin-bottom: 4px;
+}
+
+.sidebar form{
+    margin: 48px 0;
+}
+
+#entry_content, #all_pages, #not_found{
+    padding: 48px;
+}
+
+#entry_content p{
+    font-size: 16px;
+}
+
+#entry_content h1, #all_pages h1,  #not_found h1{
+    margin-bottom: 24px;
+
+}
+
+#entry_content img{
+    width: 75%;
+    text-align: center;
+    margin: 24px 0;
+    display: block;
+}
+
+#entry_content h2{
+    font-size: 24px;
+    margin: 48px 0 24px;
+    border-bottom: 1px #00ff00 solid;
+}
+
+#entry_content h3{
+    font-size: 18px;
+    text-transform: capitalize;
+    font-weight: 900;
+    margin: 48px 0 24px;
+    
+}
+
+#all_entries{
+    background-color: #ececec;
+    padding: 48px 0;
+}
+
+.align_right{
+    padding: 48px 0;
+    text-align: right;
+    width: 100%;
+}
+
+#not_found .row{
+    margin-top: 48px;
+    align-items: center;
+}
+
+#not_found .row a{
+    margin-right: 24px;
+}
+
+#not_found .row a:nth-child(2){
+    margin-right: 24px;
+    background-color: #00ff00;
+    color: #000;
+    border: #000 1px solid;
+}
+
+#new_wiki{
+    padding: 48px 0;
+    margin-bottom: 72px;
+
+}
+
+#new_wiki input{
+    padding: 12px;
+    margin-bottom: 24px;
+    display: block;
+}
+
+#new_wiki input, #new_wiki textarea {
+    background-color: #ececec;
+    width: 100%;
+    line-break: normal;
+}
+
+#new_wiki textarea{
+    max-height: 600px;
+    padding: 12px;
+}
+
+#new_wiki input[type="submit"]{
+    background-color: #00ff00;
+    margin-top: 48px;
+    font-weight: 900;
+}
+
+#new_wiki label{
+    color: #3c3c3c;
+    font-size: 12px;
+    font-weight: 900;
+
+}
+
+
+

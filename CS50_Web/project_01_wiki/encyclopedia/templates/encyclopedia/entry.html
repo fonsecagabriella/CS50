@@ -1,0 +1,17 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{title}}
+{% endblock %}
+
+{% block body %}
+    <div id="entry_content">
+        <!-- Ps: add safe so that the content of sting is output as html without the markups-->
+       {{content|safe}}
+
+       <div class="align_right">
+            <a href="{% url 'edit_entry' title %}" class="btn btn-primary" > __ edit this page __</a>
+        </div>
+    </div>
+
+{% endblock %}
