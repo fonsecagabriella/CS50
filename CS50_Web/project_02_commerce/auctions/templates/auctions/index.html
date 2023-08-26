@@ -1,0 +1,53 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    <div class="container">
+        <h2>Latest Listings</h2>
+        <div class="row filter_category">
+            <form action="{% url 'select_category' %}" method="POST">
+                {% csrf_token %}
+                <label for="product_category">Looking for something specific?</label>
+                <select name="product_category">
+                    <option value="No_cat"> -- Select category --</option>
+                    {% for category in categories %}
+                    <option value="{{ category }}"> {{ category.name }}</option>
+                    {% endfor %}
+                </select>
+                <input type="submit" value="filter">
+            </form>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+        {% for product in listing_products %}
+            <div class="col">
+                <div class="card">
+                    <div class="row g-0">
+                    <div class="col-md-4 card-left">
+                        {% if product.status == "ACT" %} <span class="badge bg-success">BID NOW</span> {% endif %}
+                        {% if product.status == "SOL" %} <span class="badge bg-danger">SOLD</span> {% endif %}
+
+                        <img src="{{ product.photo_url }}" width="100%" />
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title"><a href="{% url 'product' product.id_product %}">{{product.title }}</a> </h5>
+                            <p class="card-text">{{ product.description }}</p>
+                            <p class="card-text">
+                                {% if product.latest_bidding_value != None and product.status != "SOL" %}
+                                <small class="text-body-secondary"><b>CURRENT BID: {{ product.latest_bidding_value }} galleons</small></b>  {% endif %}
+
+                                {% if product.latest_bidding_value == None %}
+                                <small class="text-body-secondary"><b>NO BID YET, BE THE FIRST ONE!</b></small>
+                                {% endif %}
+                            </p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            <p> There are no products in this category</p>
+
+        {% endfor %}
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    <div class="container">
+        <h2>My Watchlist 👀</h2>
+
+        <table class="table table-striped">
+            <tbody>
+                {% for item in watchlist %}
+                <tr>
+                    <td>
+                        <a href="{% url 'product' item.product.id_product%}"> {{ item.product.title }} </a> 
+                    </td>
+                    <td> Ending on: {{item.product.date_end_bidding }}</td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <p> There are no products in your watchlist, but you can add some. </p>
+                </tr>
+                 {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

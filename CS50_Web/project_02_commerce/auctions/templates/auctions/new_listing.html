@@ -1,0 +1,62 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+
+<div class="container listing_main">
+    <h2>List a new item</h2>
+
+    {% if message %}
+        <div>{{ message }}</div>
+    {% else %}
+        <div class="message">
+            <p> Get ready to reveal the magic within your item as you list it for bidding.
+                Remember, the wizarding world is watching, so make it truly spellbinding!</p>
+        </div>
+    {% endif %}
+
+    <form action="{% url 'new_listing' %}" method="post" class="listing_item">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="title">Product title</label>
+            <input class="form-control" autofocus type="text" name="title" placeholder="Title">
+        </div>
+        <div class="form-group">
+            <label for="description">Product description</label>
+            <textarea class="form-control" type="email" name="description" placeholder="description"> </textarea>
+        </div>
+        <div class="form-group">
+            <label for="photo">Photo URL</label>
+            <input class="form-control" type="text" name="photo" placeholder="https://website.com/omage.png">
+        </div>
+        <div class="form-group">
+            <label for="min_bidding">Minimum value for bidding</label>
+            <input class="form-control" type="number" name="min_bidding" placeholder="Minimum bidding value">
+        </div>
+        <div class="form-group">
+            <label for="closing_date">Closing Date for bidding:</label>
+            <input class="form-control" type="text" name="closing_date" placeholder="YYYY-MM-DD">
+        </div>
+        <div class="form-group">
+            <label for="product_category">Product category: </label>
+            <select name="product_category">
+                {% for category in categories %}
+                <option value="{{ category }}"> {{ category.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="product_status">Listing status: </label>
+            <select name="product_status">
+                {% for stat in status %}
+                <option value="{{ stat }}"> {{ stat.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <input class="btn btn-primary" type="submit" value="Create listing">
+    </form>
+
+</div>
+
+
+
+{% endblock %}

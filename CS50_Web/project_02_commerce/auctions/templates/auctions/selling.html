@@ -1,0 +1,31 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    <div class="container">
+        <h2>Selling 🛍</h2>
+
+        <table class="table table-striped">
+            <tbody>
+                {% for product in selling %}
+                <tr>
+                    <td>
+                        {% if product.status == "ACT" %} <span class="badge bg-success">ACCEPTING BIDS</span> {% endif %}
+                        {% if product.status == "SOL" %} <span class="badge bg-danger">SOLD</span> {% endif %}
+                        {% if product.status == "PAU" %} <span class="badge bg-warning">PAUSED</span> {% endif %}
+                    </td>
+                    <td>
+                        <a href="{% url 'product' product.id_product %}">{{ product.title }}</a>
+                    </td>
+                    <td>
+                       Ending on: {{ product.date_end_bidding}}
+                    </td>
+                </tr>
+
+                {% empty %}
+                    <p> There are no products in your selling list, but you <a href="{% url 'new_listing' %}">add some.</a>  </p>
+                 {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

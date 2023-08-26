@@ -1,0 +1,141 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+
+
+    <div class="container product_main">
+        <h1 class="text-body-emphasis">
+            {{product.title }}
+        </h1>
+
+        <p class="fs-5 col-md-8">
+          {% if product.status == "ACT" %} <span class="badge bg-success">BID NOW</span> {% endif %}
+          {% if product.status == "SOL" %} <span class="badge bg-danger">SOLD</span> {% endif %}
+          {{ product.description }}
+        </p>
+        <div class="fs-5 col-md-8 product_page">
+            <img src="{{ product.photo_url }}" width="100%" />
+        </div>
+
+      {% if owns_product == False and product.status == "ACT" %}
+        {% if wishlisted %}
+          <form action="{% url 'remove_watchlist' product.id_product %}" method="POST">
+            {% csrf_token %}
+            <input type="submit" value="🚮 Remove from my Watchlist" class="btn btn-secondary btn-lg px-4 " value="Bid it higher" />
+          </form>
+        {% else %}
+          <form action="{% url 'add_watchlist' product.id_product %}" method="POST">
+            {% csrf_token %}
+            <input type="submit" value="❤️ Save in my Watchlist" class="btn btn-secondary btn-lg px-4 dark_blue" value="Bid it higher" />
+          </form>
+        {% endif %}
+
+        <div class="mb-5 product_bid">
+          {% if max_bidding %}
+            <p class="current_bid"> CURRENT BID: {{ max_bidding }} galleons</p>
+          {% else %}
+          <p class="current_bid"> FIRST BID FROM: {{ product.min_bidding }} galleons </p>
+          {% endif %}
+            {% if user.is_authenticated %}
+              <form action=" {% url 'bidding' product.id_product %}" method="POST" >
+                {% csrf_token %}
+                  <input type="text" class="form-control" id="bidding_value" name="bidding_value" placeholder="" >
+                  <input type="submit" class="btn btn-primary btn-lg px-4 " value="💰 Bid now" />
+              </form>
+              {% if error_bidding %}
+                <p class='alert alert-danger'> {{ error_bidding }} </p>
+              {% endif %}
+              {% if winning_bidding %}
+                <p class='alert alert-warning'> {{ winning_bidding }} </p>
+              {% endif %}
+
+            {% else %}
+              <a href="{% url 'login' %}" class="btn btn-primary btn-lg px-4 ">Login to bid</a>
+            {% endif %}
+
+        </div>
+      {% endif %}
+
+      {% if owns_product %}
+      <div class="mb-5 product_bid">
+        {% if max_bidding and not product.status == "SOL" %}
+            <p class="current_bid"> CURRENT BID: {{ max_bidding }} galleons</p>
+        {% elif product.status == "SOL"%}
+            <p class="current_bid"> 💰💰 SOLD FOR {{ max_bidding }} GALLEONS! 💰💰</p>
+            <p> Congratulations!  🤑</p>
+        {% else %}
+            <p class="current_bid"> There are no biddings yet.</p>
+        {% endif %}
+
+        {% if product.status == "ACT" and max_bidding %}
+            <form action=" {% url 'end_bidding' product.id_product %}" method="POST" >
+              {% csrf_token %}
+                <input type="submit" class="btn btn-primary btn-lg px-4 " value="💰 End bidding" />
+            </form>
+        {% endif %}
+
+
+        {% if product.status == "ACT" and not max_bidding%}
+            <form action=" {% url 'pause_bidding' product.id_product %}" method="POST" >
+              {% csrf_token %}
+                <input type="submit" class="btn btn-primary btn-lg px-4 " value="💰 Pause bidding" />
+            </form>
+            <p> You can change the status of all your listings <a href="{% url 'selling'%}">here</a>.</p>
+
+        {% endif %}
+
+
+        {% if product.status == "PAU" %}
+            <p> This listing is paused.</p>
+            <form action=" {% url 'active_bidding' product.id_product %}" method="POST" >
+              {% csrf_token %}
+                <input type="submit" class="btn btn-primary btn-lg px-4 " value="💰 Activate bidding" />
+            </form>
+            <p> You can change the status of all your listings <a href="{% url 'selling'%}">here</a>.</p>
+
+        {% endif %}
+
+      </div>
+      {% endif %}
+
+      {% if sold_to_user %}
+        <div class="mb-5 product_bid">
+          <p> 💰 Congratulations, you won this bidding! 💰 </p>
+          <p class="current_bid"> SOLD FOR: {{ max_bidding }} galleons</p>
+        </div>
+      {% endif %}
+
+        <div class="row g-5">
+          <div class="col-md-8">
+            <h2 class="text-body-emphasis" id="comments">What people are saying:</h2>
+            {% if user.is_authenticated %}
+              <form action=" {% url 'comment' product.id_product %}" method="POST" class="row g-3 comment_form">
+                {% csrf_token %}
+                <div class="col-aut">
+                  <textarea name="comment" maxlength="140"></textarea>
+                </div>
+                <div class="col-auto">
+                  <input type="submit" value="Leave your comment" />
+                </div>
+              </form>
+            {% endif %}
+
+            <ul class="list-unstyled ps-0 comment_user">
+              {% for comment in product.all_comments.all %}
+              <li>
+                  {{comment.comment}} <i><span>from {{comment.buyer}}</span></i>
+              </li>
+              {% empty %}
+              <li> There are no comments yet.</li>
+              {% endfor %}
+            </ul>
+          </div>
+
+        </div>
+
+    </div>
+
+
+
+
+{% endblock %}
