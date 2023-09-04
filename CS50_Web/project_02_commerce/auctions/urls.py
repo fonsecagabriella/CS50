@@ -5,6 +5,7 @@ from . import views
 urlpatterns = [
     path("", views.index, name="index"),
     path("login", views.login_view, name="login"),
+    path('login/<str:next>/', views.login_view, name='login_with_next'),
     path("logout", views.logout_view, name="logout"),
     path("register", views.register, name="register"),
     path("product/<str:id_product>", views.product, name="product"),

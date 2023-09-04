@@ -1,0 +1,79 @@
+body{
+    background-color: #f9f7f3;
+    color: #3c3c3c;
+    font-family: monospace;
+}
+textarea {
+    min-height: 400px;
+}
+
+.container h2{
+    margin: 24px 0;
+    color: #f7a072;
+}
+
+.container h3{
+    margin: 14px 0px 32px;
+    border-left: 8px solid #f7a072;
+    color: #006d77;
+    padding: 12px;
+    font-size: 24px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.btn{
+    color: #006d77;
+    border-color: #006d77;
+}
+
+.btn:hover{
+    background-color: #0fa3b1;
+    border-color: #0fa3b1;
+}
+
+.btn-primary{
+    background-color: #0fa3b1;
+    border-color: #0fa3b1;
+    color: #ffffff;
+}
+
+.btn-primary:hover{
+    background-color: #006d77;
+}
+
+.btn-secondary{
+    background-color: #f7a072;
+    margin-right: 16px;
+}
+
+.email_read_false{
+    background-color: #E5E5E5;
+    color: #006d77;
+    margin-top: 4px;
+}
+
+.email_read_true{
+    background-color: #ffffff;
+    margin-top: 4px;
+
+}
+
+.list-group-item{
+    border-bottom: #0fa3b1 1px dashed;
+}
+
+#email-singular, #compose-form  {
+    text-align: right;
+}
+
+#email-singular button, #compose-form input[type="submit"]{
+    margin-top: 18px;
+}
+
+#invalid_recipient{
+    display: none;
+    background-color: #ff0000;
+    margin-top: 12px;
+    color: #fff;
+}

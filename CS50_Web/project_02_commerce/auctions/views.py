@@ -9,6 +9,8 @@ from .models import User, Listing, Bid, Watchlist, ListingComments
 from django.db import models
 from django.shortcuts import render
 from django.db import connection
+from django.contrib.auth.decorators import login_required
+
 
 # items for the form, inherits from forms
 class NewListingForm(forms.Form):
@@ -134,7 +136,7 @@ def select_category(request):
         "categories": Listing.ListingCategory
     })
 
-def login_view(request):
+def login_view(request, next=None):
     if request.method == "POST":
 
         # Attempt to sign user in
@@ -145,7 +147,10 @@ def login_view(request):
         # Check if authentication successful
         if user is not None:
             login(request, user)
-            return HttpResponseRedirect(reverse("index"))
+            if next:
+                return redirect(next)
+            else:
+                return HttpResponseRedirect(reverse("index"))
         else:
             return render(request, "auctions/login.html", {
                 "message": "Invalid username and/or password."
@@ -160,6 +165,7 @@ def logout_view(request):
 
 
 def register(request):
+
     if request.method == "POST":
         username = request.POST["username"]
         email = request.POST["email"]
@@ -185,6 +191,7 @@ def register(request):
     else:
         return render(request, "auctions/register.html")
 
+
 def product(request, id_product, error_bidding=""):
     product_details = Listing.objects.get(id_product=id_product)
     owns_product = False
@@ -201,38 +208,46 @@ def product(request, id_product, error_bidding=""):
         high_bidding = None
         high_bidder = None
 
-    # check if product is sold and bought by authenticated user
-    if product_details.status == "SOL" and high_bidder == request.user:
-        sold_to_user = True
-    else:
-        sold_to_user = False
+
+    try:
+        # check if product is sold and bought by authenticated user
+        if product_details.status == "SOL" and high_bidder == request.user:
+            sold_to_user = True
+        else:
+            sold_to_user = False
 
 
-    # check if product is watchlisted by authenticated user
-    if product_details.seller == request.user: # user can't wishlist own product
-        owns_product = True
-    else:
-        try:
-            w = Watchlist.objects.get(product = product_details, buyer = request.user)
-            wishlisted = True
-        except Watchlist.DoesNotExist:
-            wishlisted = False
+        # check if product is watchlisted by authenticated user
+        if product_details.seller == request.user: # user can't wishlist own product
+            owns_product = True
+        else:
+            try:
+                w = Watchlist.objects.get(product = product_details, buyer = request.user)
+                wishlisted = True
+            except Watchlist.DoesNotExist:
+                wishlisted = False
 
-    # check if authenticated user is the high bidder
-    if not high_bidder == None and high_bidder == request.user:
-        winning_bidding = "Congratulations, you are winning this bid war!"
-    else:
-        winning_bidding= ""
 
-    return render(request, "auctions/product.html", {
-            "product": product_details,
-            "wishlisted": wishlisted,
-            "owns_product": owns_product,
-            "max_bidding": high_bidding,
-            "error_bidding": error_bidding,
-            "winning_bidding": winning_bidding,
-            "sold_to_user": sold_to_user
-        })
+        # check if authenticated user is the high bidder
+        if not high_bidder == None and high_bidder == request.user:
+            winning_bidding = "Congratulations, you are winning this bid war!"
+        else:
+            winning_bidding= ""
+
+        return render(request, "auctions/product.html", {
+                "product": product_details,
+                "wishlisted": wishlisted,
+                "owns_product": owns_product,
+                "max_bidding": high_bidding,
+                "error_bidding": error_bidding,
+                "winning_bidding": winning_bidding,
+                "sold_to_user": sold_to_user
+            })
+
+    except (TypeError, ValueError):
+
+        return HttpResponseRedirect(reverse("login"))
+
 
 def new_listing(request):
 
@@ -259,6 +274,7 @@ def new_listing(request):
         product_listing.save()
 
         return HttpResponseRedirect(reverse("product", kwargs={"id_product": product_listing.id_product}))
+
 
 def add_watchlist(request, id_product):
     if request.method == "POST":
@@ -378,7 +394,6 @@ def end_bidding(request, id_product):
             pass #does nothing
 
         return HttpResponseRedirect(reverse("product", kwargs={"id_product": id_product}))
-
 
 def selling(request):
     return render(request, "auctions/selling.html", {
