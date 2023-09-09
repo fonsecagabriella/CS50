@@ -1,0 +1,39 @@
+{% extends "network/layout.html" %}
+
+{% block body %}
+
+<div class="register">
+    <h2>🦉 Hey {{user.username }}: CUSTOMISE YOUR OWL HOOT</h2>
+
+    {% if message %}
+        <div>{{ message }}</div>
+    {% endif %}
+
+    <form action="{% url 'edit_profile' %}" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="last_name" class="form-label">First Name</label>
+            <input class="form-control" autofocus type="text" name="first_name" placeholder="{{profile.first_name}}">
+        </div>
+        <div class="form-group">
+            <label for="last_name" class="form-label">Last Name</label>
+            <input class="form-control" type="text" name="last_name" placeholder="{{profile.last_name}}">
+        </div>
+        <div class="form-group">
+            <label for="bio" class="form-label">Emoji 🦉</label>
+            <input class="form-control" type="text" name="emoji" placeholder="{{profile.emoji}}" maxlength="2">
+        </div>
+        <div class="form-group">
+            <label for="bio" class="form-label">Bio <span class="text-muted">(140 characters)</span> </label>
+            <textarea class="form-control" name="bio" id="bio" rows="2" maxlength="140"> {{ profile.bio }}</textarea>
+        </div>
+        <input class="btn btn-primary" type="submit" value="Save">
+    </form>
+
+    Changed your mind? <a href="{% url 'login' %}">Log In here.</a>
+
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,58 @@
+<div  id="all_posts">
+    <h2> {{ title_notes }}  </h2>
+
+    {% for note in page_obj %}
+    <div class="card w-100">
+        <div class="card-body">
+          <p class="card-text" id="note_{{ note.note_id }}" >{{ note.note_content }}</p>
+          <p class="card-text text-muted ">Posted on <a href="{% url 'note' note.note_id %}">{{note.created}}</a> by <a href="{% url 'profile' note.owner %}"> {{ note.owner }}</a> </p>
+          {% if user == note.owner  %}
+            <button id="edit-note" value={{ note.note_id }} class="btn btn-secondary" data-toggle="modal" data-target="#editModal">Edit</button>
+          {% endif %}
+          <!-- Button trigger modal -->
+          {% if user.is_authenticated %}
+            <button id="comment-note" class="btn btn-primary" value={{ note.note_id }} data-toggle="modal" data-target="#exampleModal"> Comment </button>
+            <button class="btn btn-yellow" id="like-note" value={{ note.note_id }} > ❤️  {{ note.likers.count }}  </button>
+          {% endif %}
+        </div>
+    </div>
+
+    {% empty %}
+
+    <div class="card w-100">
+        <div class="card-body">
+          <h5 class="card-title">There are no notes yet. Why don't you create one?</h5>
+        </div>
+    </div>
+
+    {% endfor %}
+
+</div>
+
+<nav class="nav nav_pagination" >
+  <div class="mx-auto d-block">
+    <ul class="pagination">
+      {% if page_obj.has_previous %}
+        <li class="page-item">
+            <a class="page-link" href="?page=1">&laquo; first</a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="?page={{ page_obj.previous_page_number }}">previous</a>
+        </li>
+      {% endif %}
+
+      <li class="page-item active">
+        <span class="page-link">{{ page_obj.number }}</span>
+      </li>
+
+      {% if page_obj.has_next %}
+        <li class="page-item">
+          <a class="page-link" href="?page={{ page_obj.next_page_number }}"> next </a>
+        </li>
+        <li class="page-item">
+          <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+        </li>
+      {% endif %}
+  </ul>
+  </div>
+</nav>

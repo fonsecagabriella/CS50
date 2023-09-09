@@ -176,7 +176,7 @@ function send_email(event){
         // Alert successful message
         alert(result.message);
         // Load the Sent Mailbox
-        load_mailbox('sent');
+        load_mailbox('inbox');
       }
       else{
         // Alert with error

@@ -1,0 +1,37 @@
+{% extends "network/layout.html" %}
+
+{% block body %}
+
+
+
+
+<article class="blog-post">
+  <h2 class="display-5 link-body-emphasis mb-1">{{note.note_content}}</h2>
+  <p class="blog-post-meta"> Create on {{note.created}} by <a href="{% url 'profile' note.owner %}">{{note.owner}}</a></p>
+
+  
+
+  <h3 class="display-5 link-body-emphasis mb-1">Comments</h3>
+  {% if user.is_authenticated %}
+    <div class="text-right button-comment-note">
+      <button id="comment-note" class="btn btn-primary" value={{ note.note_id }} data-toggle="modal" data-target="#exampleModal"> Join the conversation! </button> 
+    </div>
+  {% endif %}
+
+  {% for comment in comments %}
+  <p class="comment"> {{comment.comment}}
+    <span class="text-muted"> by <a href="{% url 'profile' comment.commentator %}">{{comment.commentator}}</a> on {{ comment.date }}</span>
+  </p>
+
+  {% empty %}
+  <p class="comment">
+    There are no comments yet. Why don't you create one?
+  </p>
+
+  {% endfor %}
+
+
+</article>
+
+{% include 'network/modal.html' %}
+{% endblock %}

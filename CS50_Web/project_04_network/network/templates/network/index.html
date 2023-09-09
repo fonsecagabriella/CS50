@@ -1,0 +1,25 @@
+{% extends "network/layout.html" %}
+
+{% block body %}
+
+{% if user.is_authenticated %}
+    <div  id="new_post">
+        <form id="new_post_form" action="{% url 'new_note' %}" method="post"  >
+            {% csrf_token %}
+            <div class="form-group">
+              <h1>📜  New Owl Note  </h1>
+              <textarea class="form-control" id="note_content" name="note_content" rows="3" required maxlength="280" placeholder="what's on your mind?"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Create Your Owl Note </button>
+          </form>
+
+    </div>
+{% endif %}
+
+
+    {% include 'network/notes.html' %}
+
+    {% include 'network/modal.html' %}
+
+
+{% endblock %}

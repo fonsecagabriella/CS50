@@ -1,0 +1,38 @@
+{% extends "network/layout.html" %}
+
+{% block body %}
+<div  id="profile">
+
+        <h1> {{profile.emoji }} {{ profile.username }} </h1>
+        {% if profile.bio %}
+        <p> {{ profile.bio }} </p>
+        {% else %}
+        <p> // This wizard didn't write a bio // </p>
+        {% endif %}
+
+        <div class="connections" id="connections"> FOLLOWERS: {{ profile.followers.count }} | FOLLOWING: {{profile.following.count }} </div>
+
+        {% if user.is_authenticated %}
+
+            {% if user != profile  %}
+              {% if is_following %}
+                <div class="text-right"> <button class="btn btn-yellow" value="{{ profile.username }}" id="follow-button" >  UNFOLLOW  </button> </div>
+              {% else %}
+                <div class="text-right"> <button class="btn btn-yellow" value="{{ profile.username }}" id="follow-button" >  FOLLOW  </button> </div>
+              {% endif %}
+            {% endif %}
+            {% if user == profile  %}
+              <div class="text-right"> <a href="{% url 'edit_profile' %}" class="btn btn-secondary" id="edit-profile" >  EDIT PROFILE  </a> </div>
+            {% endif %}
+        {% endif %}
+
+
+</div>
+
+{% include 'network/notes.html' %}
+
+{% include 'network/modal.html' %}
+
+
+
+{% endblock %}
