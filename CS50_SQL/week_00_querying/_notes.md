@@ -11,3 +11,6 @@
 ## SQL Commands
 
 -  `SELECT` ... `FROM`... `LIMIT`
+- `IS NULL`
+- `WHERE column LIKE '%term%' `
+- `LIKE 'abc__'` : each _ represents a character
