@@ -12,7 +12,7 @@ This repository contains my solutions, notes, and small projects from Harvard’
 |---|---|---:|---|
 | **CS50P — Introduction to Programming with Python** | https://cs50.harvard.edu/python/2022/ | **July 2023** | **Final project:** **Teach Me How to Dutch** — a django web app powered by the OpenAI API: [Teach Me How to Dutch](https://teachmehowtodutch.com/) |
 | **CS50AI — Introduction to Artificial Intelligence with Python** | https://cs50.harvard.edu/ai/2020/ | **October 2023** | **Project portfolio:** search, logic, probabilistic reasoning, optimisation, ML, neural nets, NLP (see details below) |
-| **CS50 Web — Web Programming with Python and JavaScript** | https://cs50.harvard.edu/web/ | **January 2024** | Projects + a final web app using Python, JavaScript, and SQL (Django / React / Bootstrap) |
+| **CS50 Web — Web Programming with Python and JavaScript** | https://cs50.harvard.edu/web/ | **October 2023** | Projects + a final web app using Python, JavaScript, and SQL (Django / React / Bootstrap) |
 | **CS50 SQL — Introduction to Databases with SQL** | https://cs50.harvard.edu/sql/ | **In progress (March 2026)** | Problem sets + final project focused on relational databases (SQLite → PostgreSQL/MySQL) |
 
 ## Skills and topics practiced (from this repo)
@@ -62,9 +62,10 @@ This repository contains my solutions, notes, and small projects from Harvard’
 
 - Demo video: (project walkthrough): [Youtube](https://www.youtube.com/watch?v=0YSrAEEi6-0)
 
-- Screenshot (v1)
+- Screenshot (v2)
 
-<img src="static/python_dutchionary.png" width="75%" />
+<img src="./static/teachmehowtodutch_main.png" width="30%">
+
 
 ### CS50AI project set (high-level)
 A selection of the projects included in this repository:
@@ -84,7 +85,8 @@ A selection of the projects included in this repository:
 - **[Parser](./CS50_AI/week_06_language/parser/)** (NLP parsing), **[Questions](./CS50_AI/week_06_language/questions/)** (information retrieval)
 
 ## Repo navigation
-- `static/` contains the screenshots shown above.
+- `static/` contains the screenshots/ images.
+
 - The following files contain a detailed description of each course, week by week:
     - [CS50 AI](./CS50_AI/README.md)
     - [CS50 Python](./CS50_Python/README.md)

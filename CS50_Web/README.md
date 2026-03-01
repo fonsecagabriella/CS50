@@ -13,26 +13,28 @@ Walkthrough playlist (my demos): https://www.youtube.com/playlist?list=PLNDDAVxj
 
 ## Week-by-week index
 
-| Week | Topic | Course materials | Project(s) most related | My code |
-|---:|---|---|---|---|
-| 0 | HTML, CSS | https://cs50.harvard.edu/web/weeks/0/ | **Project 0 — Search** (HTML/CSS) | [project 00](./project_00_search/) |
-| 1 | Git | https://cs50.harvard.edu/web/weeks/1/ | Project 0 — Search (versioning + workflow) | `./project0-search/` |
-| 2 | Python | https://cs50.harvard.edu/web/weeks/2/ | Bridge week → prepares for Django projects | *(notes / exercises, if any)* |
-| 3 | Django | https://cs50.harvard.edu/web/weeks/3/ | **Project 1 — Wiki** (Django basics) | `./project1-wiki/` |
-| 4 | SQL, Models, Migrations | https://cs50.harvard.edu/web/weeks/4/ | **Project 2 — Commerce** (models, auth, DB) | `./project2-commerce/` |
-| 5 | JavaScript | https://cs50.harvard.edu/web/weeks/5/ | **Project 3 — Mail** (JS + API calls) | `./project3-mail/` |
-| 6 | User Interfaces | https://cs50.harvard.edu/web/weeks/6/ | Project 3 — Mail (UI) / Project 4 — Network (UI + interactions) | `./project3-mail/` / `./project4-network/` |
-| 7 | Testing, CI/CD | https://cs50.harvard.edu/web/weeks/7/ | Project 4 — Network (stability + iteration) | `./project4-network/` |
-| 8 | Scalability & Security | https://cs50.harvard.edu/web/weeks/8/ | **Final Project — Capstone** | `./final-project/` |
+| Week | Topic | Course materials | 
+|---:|---|---|
+| 0 | HTML, CSS | https://cs50.harvard.edu/web/weeks/0/ |
+| 1 | Git | https://cs50.harvard.edu/web/weeks/1/ |
+| 2 | Python | https://cs50.harvard.edu/web/weeks/2/ |
+| 3 | Django | https://cs50.harvard.edu/web/weeks/3/ | 
+| 4 | SQL, Models, Migrations | https://cs50.harvard.edu/web/weeks/4/ | 
+| 5 | JavaScript | https://cs50.harvard.edu/web/weeks/5/ |
+| 6 | User Interfaces | https://cs50.harvard.edu/web/weeks/6/ | 
+| 7 | Testing, CI/CD | https://cs50.harvard.edu/web/weeks/7/ |
+| 8 | Scalability & Security | https://cs50.harvard.edu/web/weeks/8/ |
 
 ## Projects (specs + quick links)
 
-- Project 0 — Search (front-end for Google Search): https://cs50.harvard.edu/web/projects/0/search/  
-- Project 1 — Wiki (Wikipedia-like encyclopedia): https://cs50.harvard.edu/web/projects/1/wiki/  
-- Project 2 — Commerce (eBay-like auctions): https://cs50.harvard.edu/web/2020/projects/2/commerce/  
-- Project 3 — Mail (email client using API calls): https://cs50.harvard.edu/web/2020/projects/3/mail/  
-- Project 4 — Network (social network): https://cs50.harvard.edu/web/2020/projects/4/network/  
-- Final Project — Capstone: https://cs50.harvard.edu/web/projects/final/capstone/
+- [Project 0 — Search (front-end for Google Search)](./project_00_search/): [Video Walkthrough](https://www.youtube.com/watch?v=NGbfzpczgQM)
+- [Project 1 — Wiki (Wikipedia-like encyclopedia)](./project_01_wiki/):  [Video Walkthrough](https://www.youtube.com/watch?v=BlAb6fRBwis&)
+- [Project 2 — Commerce (eBay-like auctions)](./project_02_commerce/): [Video Walkthrough](https://www.youtube.com/watch?v=IKhq8ICpgIA) | [Long version](https://www.youtube.com/watch?v=5l0fsvA6xj8)
+- [Project 3 — Mail (email client using API calls)](./project_03_mail/): [Video Walkthrough](https://www.youtube.com/watch?v=XRNRcemLPmA)
+- [Project 4 — Network (social network)](./project_04_network/): [Video Walkthrough](https://www.youtube.com/watch?v=SzLPYVABpl0)
+- [Final Project — Capstone](https://teachmehowtodutch.com/): [Video Walkthrough](https://www.youtube.com/watch?v=0YSrAEEi6-0)
+
+<img src="./../static/teachmehowtodutch_dutchnary.png" width="30%">
 
 ## How to run (typical Django projects)
 

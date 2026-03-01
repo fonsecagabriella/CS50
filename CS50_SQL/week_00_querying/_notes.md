@@ -12,5 +12,9 @@
 
 -  `SELECT` ... `FROM`... `LIMIT`
 - `IS NULL`
-- `WHERE column LIKE '%term%' `
+- `WHERE column LIKE '%term%' `: doesn't consider case sensitive
+- `WHERE column = 'term'`: here case matters
 - `LIKE 'abc__'` : each _ represents a character
+- `BETWEEN date_01 AND date_01`
+- `ORDER BY`
+- `SELECT AVG("rating") from db`
