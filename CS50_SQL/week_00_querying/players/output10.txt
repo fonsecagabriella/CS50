@@ -1,0 +1,32 @@
+219.5|71.0|Aruba
+205.167|73.458|Australia
+177.0|70.333|Bahamas
+230.4|74.4|Brazil
+210.03|73.985|CAN
+207.792|72.375|Colombia
+214.337|73.0|Cuba
+212.583|73.25|Curacao
+207.505|73.384|D.R.
+213.5|73.6|Germany
+222.5|74.0|Guam
+173.0|72.0|Honduras
+238.0|76.0|Hong Kong
+220.0|78.0|Indonesia
+225.0|76.0|Italy
+260.0|78.0|Jamaica
+193.113|72.145|Japan
+225.0|75.0|Lithuania
+205.738|72.108|Mexico
+210.0|76.0|Netherlands
+193.125|72.375|Nicaragua
+204.474|72.34|P.R.
+208.714|72.964|Panama
+218.0|72.0|Peru
+206.0|72.0|Saudi Arabia
+192.5|71.5|South Africa
+204.92|73.2|South Korea
+194.188|72.563|Taiwan
+209.051|73.942|USA
+222.333|75.333|United Kingdom
+206.25|72.0|V.I.
+208.704|72.296|Venezuela
