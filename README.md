@@ -1,114 +1,76 @@
-# My CS50 Repository
-This repository is a personal space for consulting notes and projects created during Harvard CS50 courses.
+# CS50 Coursework (Solutions + Notes)
 
->  ⚠️  **If you are consulting these as a CS50 student, keep in mind [Harvard's Academy Honesty Policy](https://cs50.harvard.edu/ai/2020/honesty/)**
+This repository contains my solutions, notes, and small projects from Harvard’s CS50 courses.
 
----
-## 👩‍💻 [ CS50P ] PYTHON 
-https://cs50.harvard.edu/python/2022/
-(Completed in July 2023)
+> ⚠️ If you are currently taking a CS50 course, follow Harvard’s Academic Honesty policy: https://cs50.harvard.edu/ai/2020/honesty/
 
-**FINAL PROJECT:** [Dutchionary](https://imgabi.com/dutchionary) is a Flask web application powered by OpenAI API. 
-I submitted a simple application running in the terminal for the final assignment.
+> [Playlist on Youtube](https://www.youtube.com/playlist?list=PLNDDAVxjlPk3-h1MiH-fZLVEiiawkmplP) with the projects showcase / explanation.
 
-<img src="static/python_dutchionary.png" width="75%" />
-----
+## Courses completed
 
-## 👩‍💻 [ CS50AI ] INTRODUCTION TO ARTIFICIAL INTELLIGENCE
-https://cs50.harvard.edu/ai/2020/
-(Currently enrolled)
+| Course | Official page | Completed | Final / highlight |
+|---|---|---:|---|
+| **CS50P — Introduction to Programming with Python** | https://cs50.harvard.edu/python/2022/ | **July 2023** | **Final project:** **Dutchionary** — a Flask web app powered by the OpenAI API: https://imgabi.com/dutchionary |
+| **CS50AI — Introduction to Artificial Intelligence with Python** | https://cs50.harvard.edu/ai/2020/ | **October 2023** | **Project portfolio:** search, logic, probabilistic reasoning, optimisation, ML, neural nets, NLP (see details below) |
+| **CS50 Web — Web Programming with Python and JavaScript** | https://cs50.harvard.edu/web/ | **January 2024** | Projects + a final web app using Python, JavaScript, and SQL (Django / React / Bootstrap) |
+| **CS50 SQL — Introduction to Databases with SQL** | https://cs50.harvard.edu/sql/ | **In progress (March 2026)** | Problem sets + final project focused on relational databases (SQLite → PostgreSQL/MySQL) |
 
-### Week 00: SEARCH
+## Skills and topics practiced (from this repo)
 
-**Topics covered:** Depth-first search, breadth-first search, uninformed search, informed search, greedy best-first search, A* search, adversarial search, minimax, alpha-beta pruning, depth-limited minimax
+### AI / ML ([CS50AI](./CS50_AI/))
+- **Search:** DFS, BFS, greedy best‑first, **A\***, minimax, alpha‑beta pruning, depth‑limited minimax  
+- **Knowledge & logic:** propositional logic, inference, resolution  
+- **Uncertainty:** Bayes’ rule, Markov chains, Bayesian networks  
+- **Optimisation:** constraint satisfaction, backtracking, local search (hill climbing, simulated annealing)  
+- **Learning:** classification (k‑NN), reinforcement learning (Q‑learning), clustering  
+- **Neural networks:** gradient descent, CNN basics (convolution/pooling)  
+- **Language:** n‑grams, tokenisation, parsing, information retrieval, topic modelling  
 
-**PROJECT 01: DEGREES**
-Write a program determining how many “degrees of separation” apart two actors are.
+### Databases ([CS50 SQL](./CS50_SQL/))
+- **Relational modelling:** tables, types, primary/foreign keys, joins
+- **Querying:** SELECT, WHERE, ORDER BY, LIMIT/OFFSET, LIKE, aggregates, DISTINCT
+- **Data quality/performance:** normalization, constraints, triggers, views, indexes
+- **DB engines:** SQLite first; introductions to PostgreSQL and MySQL
+- **Integration:** connecting SQL with other languages (e.g., Python, Java)
 
-<img src="static/week_0_degrees.png" width="75%" />
+### Web development ([CS50 Web](./CS50_Web/))
+- **Core web:** HTML, CSS, JavaScript
+- **Backend:** Python + Django
+- **Data layer:** SQL, models, migrations
+- **Modern web app concerns:** database design, security, scalability, UX
+- **APIs + deployment workflow:** building/using APIs, interactive UIs, GitHub/Heroku
 
-**PROJECT 02: TIC-TAC-TOE**
-Implement an AI to play Tic-Tac-Toe optimally (Minimax).
-<img src="static/week_0_tictactoe.png" width="75%" />
 
-----
-### Week 01: KNOWLEDGE
 
-**Topics covered:** Propositional logic, inference algorithms, de Morgan’s law, distributive property, inference by resolution
+### Libraries/tools used
+- **Flask**, **OpenAI API** (CS50P final project)
+- **scikit‑learn**, **TensorFlow**, **NLTK**, **Matplotlib** (CS50AI projects)
+- **Django**, **React**, **Bootstrap** (CS50 Web)
+- **SQLite**, **PostgreSQL**, **MySQL** (CS50 SQL)
 
-**PROJECT 01: KNIGHTS**
-Write a program to solve logic puzzles.
-<img src="static/week_1_knights.png" width="75%" />
+## Featured projects
 
-**PROJECT 02: MINESWEEPER**
-Write an AI to play Minesweeper (Propositional logic, knowledge representation).
-<img src="static/week_1_minesweeper.png" width="75%" />
+### Teach Me How to Dutch (CS50P final → CS50 Web capstone)
 
-----
-### Week 02: UNCERTAINTY
+- Live demo: [Teach Me How to Dutch](https://teachmehowtodutch.com/)
+- What it does: **Dutchionary (words/expressions)**, **sentence checking**, **translation saving** — in one place. :contentReference[oaicite:1]{index=1}  
+- Project evolution:
+  - **CS50P final (v1):** “Dutchionary” built with **Flask** (terminal-first workflow).
+  - **CS50 Web capstone (v2):** rebuilt as **Django** (“Teach Me How to Dutch”), adding a more complete web-app structure.
+- Demo video (project walkthrough): [Youtube](https://www.youtube.com/watch?v=0YSrAEEi6-0)
+- Screenshot:
+  <img src="static/python_dutchionary.png" width="75%" />
 
-**Topics covered:** Propositional logic, inference algorithms, Bayes' rule, de Morgan’s law, distributive property, inference by resolution
+### CS50AI project set (high-level)
+A selection of the projects included in this repository:
+- **Degrees** (graph search), **Tic‑Tac‑Toe** (minimax)
+- **Knights** (logic puzzles), **Minesweeper** (knowledge representation)
+- **PageRank** (Markov chain), **Heredity** (Bayesian network)
+- **Crossword** (CSP / backtracking)
+- **Shopping** (k‑NN with scikit‑learn), **Nim** (reinforcement learning)
+- **Traffic** (TensorFlow CNN), **Parser** (NLP parsing), **Questions** (information retrieval)
 
-**PROJECT 01: PAGERANK**
-Write an AI to rank web pages by importance (Markov Chain).
-<img src="static/week_2_pagerank.png" width="75%" />
-
-**PROJECT 02: HEREDITY**
-Write an AI to assess the likelihood of a person having a particular genetic trait (Bayesian network).
-
-<img src="static/week_2_heredity.png" width="75%" />
-
-----
-
-### Week 03: OPTIMISATION
-
-**Topics covered:**  Problem formulation (local search, linear programming algorithms, constraint satisfaction), hill climbing (and variants), simulated annealing, backtracking search, inference
-
-**PROJECT 01: CROSSWORD**
-Write an AI to generate crossword puzzles (backtrack search).
-
-<img src="static/week_3_crossword.png" width="75%" />
-
-----
-
-### Week 04: LEARNING
-
-**Topics covered:**  Supervised learning, reinforcement learning (Markov chain, Q-learning, greedy decision making),  unsupervised learning (clustering) | **Libraries: SkLearn**
-
-**PROJECT 01: SHOPPING**
-Write an AI to predict whether online shopping customers will complete a purchase (K-neighbours classifier). **Using sklearn**. 
-
-<img src="static/week_4_shopping.png" width="75%" />
-
-**PROJECT 02: NIM**
-Write an AI that teaches itself to play Nim through reinforcement learning.
-
-<img src="static/week_4_nim.png" width="75%" />
-
-----
-
-### Week 05: NEURAL NETWORKS
-
-**Topics covered:**  Gradient descent (stochastic, mini-batch), deep neural networks, computer vision (image convolution, pooling)  **Libraries: TensorFlow, MatPlotLib**
-
-**PROJECT 01: TRAFFIC**
-Write an AI to identify which traffic sign appears in a photograph, **using TensorFlow**.
-
-<img src="static/week_5_traffic.png" width="75%" />
-
-----
-
-### Week 06: LANGUAGES
-
-**Topics covered:**  Natural language processing, semantics x syntax, n-grams, tokenisation, Markov models, text categorisation, information retrieval, topic modelling | **Libraries: Nltk** 
-
-**PROJECT 01: PARSER**
-Write an AI to parse sentences and extract noun phrases.
-
-<img src="static/week_6_parser.png" width="75%" />
-
-**PROJECT 02: QUESTIONS**
-Write an AI to ask questions (information retrieval based on a corpus). 
-<img src="static/week_6_questions.png" width="75%" />
-
+## Repo navigation
+- `static/` contains the screenshots shown above.
+- The previous long, week‑by‑week course outline was moved to **README_detailed.md** to keep this root README short.
 
