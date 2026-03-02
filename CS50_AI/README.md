@@ -1,97 +1,136 @@
-# 👩‍💻 [ CS50AI ] INTRODUCTION TO ARTIFICIAL INTELLIGENCE
+# 👩‍💻 CS50AI — Introduction to Artificial Intelligence with Python
 
-https://cs50.harvard.edu/ai/2020/
-(Completed in October 2023)
+> This course explores the concepts and algorithms at the foundation of modern artificial intelligence, diving into the ideas that give rise to technologies like game-playing engines, handwriting recognition, and machine translation. Through hands-on projects, students gain exposure to the theory behind graph search algorithms, classification, optimization, machine learning, large language models, and other topics in artificial intelligence as they incorporate them into their own Python programs.
 
-## Week 00: SEARCH
+- Course: CS50’s Introduction to Artificial Intelligence with Python  
+- Official course page: https://cs50.harvard.edu/ai/2020/  
+- Completed: **October 2023**
 
-**Topics covered:** Depth-first search, breadth-first search, uninformed search, informed search, greedy best-first search, A* search, adversarial search, minimax, alpha-beta pruning, depth-limited minimax
+> Academic honesty: if you are currently taking CS50AI, do not submit these solutions as your own.
 
-**PROJECT 01: DEGREES**
+---
+
+## Contents
+
+- [Week 0 — Search](#week-0--search)
+- [Week 1 — Knowledge](#week-1--knowledge)
+- [Week 2 — Uncertainty](#week-2--uncertainty)
+- [Week 3 — Optimization](#week-3--optimization)
+- [Week 4 — Learning](#week-4--learning)
+- [Week 5 — Neural Networks](#week-5--neural-networks)
+- [Week 6 — Language](#week-6--language)
+
+---
+
+## Week 0 — Search
+Week page: https://cs50.harvard.edu/ai/weeks/0/
+
+**Topics covered:** Search problems, depth-first search (DFS), breadth-first search (BFS), greedy best-first search, A* search, minimax, alpha-beta pruning.
+
+### Project 0A — Degrees
 Write a program determining how many “degrees of separation” apart two actors are.
 
-<img src="./../static/week_0_degrees.png" width="75%" />
+<img src="./../static/week_0_degrees.png" width="75%" alt="CS50AI Degrees screenshot" />
 
-**PROJECT 02: TIC-TAC-TOE**
-Implement an AI to play Tic-Tac-Toe optimally (Minimax).
-<img src="./../static/week_0_tictactoe.png" width="75%" />
+### Project 0B — Tic-Tac-Toe
+Implement an AI to play Tic-Tac-Toe optimally (minimax).
 
-----
-## Week 01: KNOWLEDGE
+<img src="./../static/week_0_tictactoe.png" width="75%" alt="CS50AI Tic-Tac-Toe screenshot" />
 
-**Topics covered:** Propositional logic, inference algorithms, de Morgan’s law, distributive property, inference by resolution
+---
 
-**PROJECT 01: KNIGHTS**
+## Week 1 — Knowledge
+Week page: https://cs50.harvard.edu/ai/weeks/1/
+
+**Topics covered:** Propositional logic, entailment, inference, model checking, resolution, first-order logic.
+
+### Project 1A — Knights
 Write a program to solve logic puzzles.
-<img src="./../static/week_1_knights.png" width="75%" />
 
-**PROJECT 02: MINESWEEPER**
-Write an AI to play Minesweeper (Propositional logic, knowledge representation).
-<img src="./../static/week_1_minesweeper.png" width="75%" />
+<img src="./../static/week_1_knights.png" width="75%" alt="CS50AI Knights screenshot" />
 
-----
-## Week 02: UNCERTAINTY
+### Project 1B — Minesweeper
+Write an AI to play Minesweeper (knowledge representation).
 
-**Topics covered:** Propositional logic, inference algorithms, Bayes' rule, de Morgan’s law, distributive property, inference by resolution
+<img src="./../static/week_1_minesweeper.png" width="75%" alt="CS50AI Minesweeper screenshot" />
 
-**PROJECT 01: PAGERANK**
-Write an AI to rank web pages by importance (Markov Chain).
-<img src="./../static/week_2_pagerank.png" width="75%" />
+---
 
-**PROJECT 02: HEREDITY**
+## Week 2 — Uncertainty
+Week page: https://cs50.harvard.edu/ai/weeks/2/
+
+**Topics covered:** Probability, conditional probability, random variables, independence, Bayes’ rule, joint probability, Bayesian networks, sampling, Markov models, hidden Markov models.
+
+### Project 2A — PageRank
+Write an AI to rank web pages by importance (Markov chain).
+
+<img src="./../static/week_2_pagerank.png" width="75%" alt="CS50AI PageRank screenshot" />
+
+### Project 2B — Heredity
 Write an AI to assess the likelihood of a person having a particular genetic trait (Bayesian network).
 
-<img src="./../static/week_2_heredity.png" width="75%" />
+<img src="./../static/week_2_heredity.png" width="75%" alt="CS50AI Heredity screenshot" />
 
-----
+---
 
-## Week 03: OPTIMISATION
+## Week 3 — Optimization
+Week page: https://cs50.harvard.edu/ai/weeks/3/
 
-**Topics covered:**  Problem formulation (local search, linear programming algorithms, constraint satisfaction), hill climbing (and variants), simulated annealing, backtracking search, inference
+**Topics covered:** Local search, hill climbing, simulated annealing, linear programming, constraint satisfaction, backtracking search.
 
-**PROJECT 01: CROSSWORD**
-Write an AI to generate crossword puzzles (backtrack search).
+### Project 3 — Crossword
+Write an AI to generate crossword puzzles (constraint satisfaction + backtracking).
 
-<img src="./../static/week_3_crossword.png" width="75%" />
+<img src="./../static/week_3_crossword.png" width="75%" alt="CS50AI Crossword screenshot" />
 
-----
+---
 
-## Week 04: LEARNING
+## Week 4 — Learning
+Week page: https://cs50.harvard.edu/ai/weeks/4/
 
-**Topics covered:**  Supervised learning, reinforcement learning (Markov chain, Q-learning, greedy decision making),  unsupervised learning (clustering) | **Libraries: SkLearn**
+**Topics covered:** Supervised learning (k-NN, perceptron, SVM, regression), loss functions, overfitting + regularization, reinforcement learning (MDPs, Q-learning), unsupervised learning (k-means).
 
-**PROJECT 01: SHOPPING**
-Write an AI to predict whether online shopping customers will complete a purchase (K-neighbours classifier). **Using sklearn**. 
+**Libraries used:** scikit-learn
 
-<img src="./../static/week_4_shopping.png" width="75%" />
+### Project 4A — Shopping
+Predict whether online shopping customers will complete a purchase (k-nearest neighbors classifier).
 
-**PROJECT 02: NIM**
-Write an AI that teaches itself to play Nim through reinforcement learning.
+<img src="./../static/week_4_shopping.png" width="75%" alt="CS50AI Shopping screenshot" />
 
-<img src="./../static/week_4_nim.png" width="75%" />
+### Project 4B — Nim
+Teach an AI to play Nim through reinforcement learning.
 
-----
+<img src="./../static/week_4_nim.png" width="75%" alt="CS50AI Nim screenshot" />
 
-## Week 05: NEURAL NETWORKS
+---
 
-**Topics covered:**  Gradient descent (stochastic, mini-batch), deep neural networks, computer vision (image convolution, pooling)  **Libraries: TensorFlow, MatPlotLib**
+## Week 5 — Neural Networks
+Week page: https://cs50.harvard.edu/ai/weeks/5/
 
-**PROJECT 01: TRAFFIC**
-Write an AI to identify which traffic sign appears in a photograph, **using TensorFlow**.
+**Topics covered:** Artificial neural networks, activation functions, gradient descent, backpropagation, overfitting, TensorFlow, image convolution, CNNs, RNNs.
 
-<img src="./../static/week_5_traffic.png" width="75%" />
+**Libraries used:** TensorFlow, Matplotlib
 
-----
+### Project 5 — Traffic
+Identify which traffic sign appears in a photograph (CNN with TensorFlow).
 
-## Week 06: LANGUAGES
+<img src="./../static/week_5_traffic.png" width="75%" alt="CS50AI Traffic screenshot" />
 
-**Topics covered:**  Natural language processing, semantics x syntax, n-grams, tokenisation, Markov models, text categorisation, information retrieval, topic modelling | **Libraries: Nltk** 
+---
 
-**PROJECT 01: PARSER**
-Write an AI to parse sentences and extract noun phrases.
+## Week 6 — Language
+Week page: https://cs50.harvard.edu/ai/weeks/6/
 
-<img src="./../static/week_6_parser.png" width="75%" />
+**Topics covered:** Syntax, semantics, context-free grammar, NLTK, n-grams, bag-of-words, naive Bayes, word representations (word2vec), attention, transformers.
 
-**PROJECT 02: QUESTIONS**
-Write an AI to ask questions (information retrieval based on a corpus). 
-<img src="./../static/week_6_questions.png" width="75%" />
+**Libraries used:** NLTK
+
+### Project 6A — Parser
+Parse sentences and extract noun phrases.
+
+<img src="./../static/week_6_parser.png" width="75%" alt="CS50AI Parser screenshot" />
+
+### Project 6B — Questions
+Answer questions using information retrieval over a corpus.
+
+<img src="./../static/week_6_questions.png" width="75%" alt="CS50AI Questions screenshot" />

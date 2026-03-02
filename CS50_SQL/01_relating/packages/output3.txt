@@ -1,0 +1,3 @@
+Pick|2023-08-23 19:41:47.913410|Flowers|950 Brannon Harris Way|Warehouse|Mikel
+Drop|2023-08-17 03:31:36.856889|Flowers|950 Brannon Harris Way|Warehouse|Maegan
+Pick|2023-08-16 21:41:43.219831|Flowers|109 Tileston Street|Residential|Maegan

@@ -1,0 +1,2 @@
+Drop|2023-07-11 23:07:04.432178|2 Finnigan Street|Residential
+Pick|2023-07-11 19:33:55.241794|900 Somerville Avenue|Residential

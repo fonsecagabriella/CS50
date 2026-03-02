@@ -1,10 +1,11 @@
 # CS50 Web — Web Programming with Python and JavaScript (Solutions)
 
-Course: CS50’s Web Programming with Python and JavaScript  
-Official course page: https://cs50.harvard.edu/web/  
-Walkthrough playlist (my demos): https://www.youtube.com/playlist?list=PLNDDAVxjlPk3-h1MiH-fZLVEiiawkmplP
+> *(CS50 dives more deeply) into the design and implementation of web apps with Python, JavaScript, and SQL using frameworks like Django, React, and Bootstrap. Topics include database design, scalability, security, and user experience. Through hands-on projects, students learn to write and use APIs, create interactive UIs, and leverage cloud services like GitHub and Heroku. By semester’s end, students emerge with knowledge and experience in principles, languages, and tools that empower them to design and deploy applications on the Internet.*
 
-> Academic honesty: If you are currently taking CS50 Web, follow CS50’s Academic Honesty policy and do not submit these solutions as your own.
+- Course: CS50’s Web Programming with Python and JavaScript  
+- Official course page: https://cs50.harvard.edu/web/  
+- Walkthrough playlist (my demos): https://www.youtube.com/playlist?list=PLNDDAVxjlPk3-h1MiH-fZLVEiiawkmplP
+- Completed on ***October 2023***
 
 ## Repo structure (this folder)
 
@@ -13,7 +14,7 @@ Walkthrough playlist (my demos): https://www.youtube.com/playlist?list=PLNDDAVxj
 
 ## Week-by-week index
 
-| Week | Topic | Course materials | 
+| Week | Topic | Course materials |
 |---:|---|---|
 | 0 | HTML, CSS | https://cs50.harvard.edu/web/weeks/0/ |
 | 1 | Git | https://cs50.harvard.edu/web/weeks/1/ |

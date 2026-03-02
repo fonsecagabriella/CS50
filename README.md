@@ -6,6 +6,7 @@ This repository contains my solutions, notes, and small projects from Harvard’
 
 > [Playlist on Youtube](https://www.youtube.com/playlist?list=PLNDDAVxjlPk3-h1MiH-fZLVEiiawkmplP) with the projects showcase / explanation.
 
+
 ## Courses completed
 
 | Course | Official page | Completed | Final / highlight |
