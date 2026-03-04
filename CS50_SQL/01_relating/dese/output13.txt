@@ -1,0 +1,102 @@
+Brookline|2.6|0|25689.75
+Pathfinder Regional Vocational Technical|2.5|0|24381.2
+Concord-Carlisle|2.5|0|23344.72
+Needham|2.5|0|21146.56
+Upper Cape Cod Regional Vocational Technical|2.4|0|25338.64
+Amherst-Pelham|2.4|0|24555.36
+Greater New Bedford Regional Vocational Technical|2.3|0|22932.96
+Northeast Metropolitan Regional Vocational Technical|2.3|0|21825.6
+Bourne|1.7|0.6|20294.55
+Greater Fall River Regional Vocational Technical|1.3|0.7|20978.46
+Marion|2|0|19704.86
+Amherst|1.9|0|26345.29
+Newton|1.7|0.1|23431.12
+Canton|1.8|0|20012.55
+Boston|1.5|0.2|26589.17
+Brewster|1.6|0|25117.33
+Dedham|1.6|0|24010.81
+Concord|0.8|0.8|23268.92
+Foxborough|1.6|0|20620.81
+Edgartown|1.5|0|27703.31
+Watertown|1.5|0|25550.44
+Oak Bluffs|0|1.5|24789.3
+Norfolk County Agricultural|1.5|0|23658.3
+Whittier Regional Vocational Technical|1.5|0|21641.88
+Carlisle|1.4|0|21430.06
+Northboro-Southboro|1.4|0|19683.27
+Cambridge|1.3|0|35113.7
+Lincoln|1.3|0|28188.1
+Westwood|1.3|0|20499.76
+Sudbury|1.3|0|19954.84
+Hudson|1.3|0|19882.96
+Nashoba|1.3|0|19569.91
+Andover|1|0.2|20941.36
+King Philip|1.2|0|19918.26
+Minuteman Regional Vocational Technical|1.1|0|32814.39
+Blue Hills Regional Vocational Technical|1.1|0|23629.7
+Hampshire|1.1|0|21810.18
+Plymouth|1|0|19562.98
+Marblehead|1|0|19558.01
+Greater Lowell Regional Vocational Technical|0.9|0|21503.15
+Bedford|0.9|0|21372.7
+Woburn|0.9|0|20497.87
+Amesbury|0.9|0|19883.64
+Weston|0.8|0|30295.95
+Falmouth|0.5|0.3|22868.01
+Blackstone Valley Regional Vocational Technical|0.8|0|21509.51
+Dover-Sherborn|0.7|0|21860.15
+Manchester Essex Regional|0|0.7|21772.56
+Cohasset|0|0.7|20525.08
+Nauset|0.6|0|23259.47
+Wilmington|0.6|0|22094.76
+Mashpee|0.6|0|21104.55
+Dennis-Yarmouth|0.6|0|20728.4
+Hamilton-Wenham|0.6|0|20544.67
+Greater Lawrence Regional Vocational Technical|0|0.5|23074.47
+Lexington|0.5|0|21429.38
+Monomoy Regional School District|0.5|0|20773.63
+Ipswich|0.5|0|20686.9
+Wareham|0.5|0|19728.99
+Sandwich|0.4|0|21246.59
+Newburyport|0.4|0|19971.98
+Gloucester|0.3|0|20131.02
+Provincetown|0|0|41318.9
+Wellfleet|0|0|32788.2
+Orleans|0|0|31703.4
+Tisbury|0|0|29598.7
+Erving|0|0|28975.86
+Dover|0|0|25842.02
+Eastham|0|0|25444.12
+Franklin County Regional Vocational Technical|0|0|25107.13
+Rockport|0|0|24917.77
+Edward M. Kennedy Academy for Health Careers: A Horace Mann Charter Public School (District)|0|0|24835.64
+Conway|0|0|24771.6
+Berkshire Hills|0|0|23998.57
+Mohawk Trail|0|0|23807.15
+Mattapoisett|0|0|23678.54
+Southern Berkshire|0|0|23341.36
+Shutesbury|0|0|23098.53
+Somerville|0|0|22729.93
+Old Colony Regional Vocational Technical|0|0|22711.27
+New Salem-Wendell|0|0|22635.25
+Whately|0|0|21639.1
+Sherborn|0|0|21626.57
+Sunderland|0|0|21584.47
+Montachusett Regional Vocational Technical|0|0|21573.81
+UP Academy Charter School of Boston (District)|0|0|21476.43
+Bristol County Agricultural|0|0|21286.32
+Williamsburg|0|0|21219.78
+Boxford|0|0|21099.34
+Westhampton|0|0|20974.86
+Maynard|0|0|20901.19
+Triton|0|0|20857.87
+Mount Greylock|0|0|20817.31
+Middleton|0|0|20693.93
+Wayland|0|0|20613.54
+Deerfield|0|0|20520.69
+Assabet Valley Regional Vocational Technical|0|0|20447.01
+Wrentham|0|0|20107.03
+Bristol-Plymouth Regional Vocational Technical|0|0|20069.67
+Gill-Montague|0|0|20020.83
+Pelham|0|0|19949.58
+Agawam|0|0|19689.66
