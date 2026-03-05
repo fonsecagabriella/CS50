@@ -1,0 +1,10 @@
+Albert|Pujols|5405
+Aramis|Ramirez|8382
+Torii|Hunter|8518
+Lance|Berkman|8970
+Paul|Lo Duca|9200
+Russell|Branyan|10950
+Corey|Koskie|11538
+Jay|Gibbons|13333
+Bubba|Trammell|13400
+Robert|Fick|13421
