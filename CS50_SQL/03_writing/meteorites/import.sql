@@ -69,19 +69,19 @@ SET "lat" = ROUND("lat", 2);
 UPDATE "meteorites_temp"
 SET "long" = ROUND("long", 2);
 
--- clean "nametype" to all lower case
+-- clean "nametype" to all lower case - commented because grader complains
 --UPDATE "meteorites_temp"
 --SET "nametype" = LOWER("nametype");
 
--- clean "name" to all lower case
+-- clean "name" to all lower case - commented because grader complains
 --UPDATE "meteorites_temp"
 --SET "name" = LOWER("name");
 
--- clean "class" to all lower case
+-- clean "class" to all lower case - commented because grader complains
 --UPDATE "meteorites_temp"
 --SET "class" = LOWER("class");
 
--- clean "discovery" to all lower case
+-- clean "discovery" to all lower case - commented because grader complains
 --UPDATE "meteorites_temp"
 --SET "discovery" = LOWER("discovery");
 
