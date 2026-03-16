@@ -26,7 +26,7 @@ WHERE;
 ## Vacuum
 
 - A way to "clean" the db;
-- Use: `VACCUM` as a command in a .sql file. 
+- Use: `VACCUM` as a command in a .sql file.
 -  `du -b movies.db`: check the size of bytes of a DB
 
 ## Transactions / Concurrency
