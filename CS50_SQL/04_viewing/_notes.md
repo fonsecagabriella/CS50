@@ -34,3 +34,35 @@ WITH "name" AS (
     SELECT ...
 )
 ```
+
+## Triggers
+
+```sql
+CREATE TRIGGER name
+INSTEAD OF DELETE ON view
+FOR EACH ROW
+-- Alternative
+-- FOR EACH ROW WHEN -- condition
+BEGIN
+    -- run this other statement
+    ;
+END;
+
+```
+
+
+- Example (instead of inserting in a view - not possible, update value)
+```sql
+CREATE TRIGGER "insert_when _exists"
+INSTEAD OF INSERT ON "current_collections"
+FOR EACH ROW
+WHEN NEW."accession_number" IN (
+    SELECT "accession_number" FROM "collections"
+)
+BEGIN
+    UPDATE "collections" SET "deleted"= 0
+    WHERE "accession_number"= NEW."accession_number"
+END;
+
+;
+```

@@ -45,8 +45,8 @@ COMMIT;
 
 - `ROLLBACK`: use as the final of a transaction, to 'undo' commands if a condition fails due a constraint.
 
-## Locks
-
-- UNLOCKED
-- SHARED
-- EXCLUSIVE
+- Locks for transactions:
+    - `UNLOCKED`
+    - `SHARED`
+    - `EXCLUSIVE`
+    - Use: `BEGIN EXCLUSIVE TRANSACTION (...) `
